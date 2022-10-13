@@ -21,6 +21,7 @@ from app1 import views
 from app1 import urls
 urlpatterns = [
     path("FirstDjangoProject/",include('app1.urls')),
+    path("help/",include('app1.urls')),
     path("",views.index),
     path("admin/", admin.site.urls),
 ]
