@@ -2,6 +2,7 @@ import imp
 from operator import imod
 import os
 from re import T
+from unicodedata import name
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','app1.settings')
 import django
 django.setup()
@@ -19,5 +20,8 @@ def populate(N=5):
         top = add_topic()
         fake_url = fakegen.url()
         fake_date = fakegen.date()
-        fake_name = fakegen.name()
+        fake_name = fakegen.company()
         
+        webpg = Webpage.objects.get_or_create(topic=top,url=fake_url,name=fake_name)[0]
+        
+        acc_rec = AccessRecord.objects.get_or_create(name=webpg,date=fake_date)[0]
