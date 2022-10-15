@@ -1,9 +1,5 @@
-import imp
-from operator import imod
 import os
-from re import T
-from unicodedata import name
-os.environ.setdefault('DJANGO_SETTINGS_MODULE','app1.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE','pyDjangoProject.settings')
 import django
 django.setup()
 import random
