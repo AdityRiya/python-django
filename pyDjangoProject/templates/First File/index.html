@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="{%static "css/style.css" %}">
 </head>
 <body>
-    
+    <h1>Django Project</h1>
+    <h2>Here is your Info:</h2>
+    <div class="django_two" >
+        {% if access_records %}
+        <table>
+            <thead>
+                 <th>Site Name</th>
+                 <th>Date Accessed</th>
+            </thead>
+        </table>
+    </div>
 </body>
 </html>
