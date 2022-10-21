@@ -32,15 +32,16 @@ class AccessRecord(models.Model):
     
     
 # 2nd model for another page
-class Firstname(models.Model):
-    first_name = models.CharField(max_length=64,unique=True)
-    def __str__(self):
-        return self.first_name
-class Lastname(models.Model):
-    last_name = models.ForeignKey(
-        'first_name',
-    on_delete=models.CASCADE,)
-    name = models.CharField(max_length=64,unique=True)
-    url = models.URLField(unique=True)
-    def __str__(self):
-        return self.name
+# class Firstname(models.Model):
+#     first_name = models.CharField(max_length=64,unique=True)
+#     def __str__(self):
+#         return self.first_name
+# class Lastname(models.Model):
+#     last_name = models.ForeignKey(
+#         'first_name',
+#     on_delete=models.CASCADE,)
+#     name = models.CharField(max_length=64,unique=True)
+#     url = models.URLField(unique=True)
+#     def __str__(self):
+#         return self.name
+class User()
